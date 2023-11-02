@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="aboutusStyles.css" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>About Us Section</title>
+</head>
+<script>
+    let products = [
+    {
+        id: 1,
+        name:'Samsung Mobile',
+        image: '1.PNG',
+        price : 120000
+    },
+    {
+        id: 2,
+        name:'Lenove Desktop',
+        image: '2.PNG',
+        price : 150000
+    },
+    {
+        id: 3,
+        name:'Kodak Camer',
+        image: '3.PNG',
+        price : 20000
+    },
+    {
+        id: 4,
+        name:'Dell Desktop',
+        image: '4.PNG',
+        price : 5000
+    },{
+        id: 5,
+        name:'Kent  Purifier',
+        image: '5.PNG',
+        price : 5000
+    },{
+        id: 6,
+        name:'Apple IPOD',
+        image: '6.PNG',
+        price : 15000
+    },
+    
+];
+function funLoad(){
+    var urlAdress=document.URL
+    var resourceData=urlAdress.split("?")[1]
+    var index=resourceData.split("=")[1]
+    document.getElementById("head1").innerHTML=products[index].name
+    document.getElementById("img1").src="image/"+products[index].image
+    document.getElementById("price").innerHTML="Rs: "+products[index].price
+}
+</script>
+<body onload="funLoad()">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html" style="font-weight: bold;">Products</a>
+                  </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="aboutus.html" style="font-weight: bold;">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactus.html" style="font-weight: bold;">Contact Us</a>
+              </li>  
+     
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="section">
+        <div class="container" style="display:flex">
+            <div class="image-section" style="margin-right:50px">
+                <img src="image/1.PNG" id="img1">
+            </div>
+
+            <div class="content-section">
+                <div class="title">
+                    <h1 id="head1"></h1>
+                </div>
+                <div class="content">
+                    <h3>SAMSUNG Galaxy F14 5G (B.A.E. Purple, 128 GB)  (6 GB RAM)</h3>
+                    <li>6 GB RAM | 128 GB ROM | Expandable Upto 1 TB</li>
+                    <li> 16.76 cm (6.6 inch) Full HD+ Display</li>
+                    <li>50MP + 2MP | 13MP Front Camera</li>
+                    <li> 6000 mAh Battery</li>
+                    <li> Exynos 1330, Octa Core Processor</li>
+                    <br/>
+                    <h1 id="price"></h1>
+                    <img src="image/star1.png" width="30px" >
+                        <img src="image/star1.png" width="30px" >
+                        <img src="image/star1.png" width="30px" >
+                        <img src="image/star1.png" width="30px" >
+                        <img src="image/star1.png" width="30px" />
+                  
+                        <div class="button">
+                            <a href="">ADD TO CART</a>
+                            <a href="products.html">Goto Back</a>
+                            </div>
+                </div>
+                
+                <!-- <div class="social">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+
+                </div> -->
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
